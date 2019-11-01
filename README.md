@@ -18,7 +18,7 @@
 
 ## Pictures
 
-![動作例](https://imgur.com/hwTCyiG)
+![動作例](https://i.imgur.com/hwTCyiG.png)
 
 ## License 
 MIT License
