@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -13,6 +14,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.Windows.Threading;
+using System.Windows.Forms;
 
 namespace ResetTimer
 {
@@ -28,6 +30,8 @@ namespace ResetTimer
         public MainWindow()
         {
             InitializeComponent();
+            this.Left = Screen.PrimaryScreen.Bounds.Width - this.Width - 50;
+            this.Top = Screen.PrimaryScreen.Bounds.Height - this.Height - 50;
             t.Interval = new TimeSpan(0, 0, 1);
             t.Tick += timerTicked;
             t.IsEnabled = true;
@@ -75,6 +79,11 @@ namespace ResetTimer
             this.Topmost = !this.Topmost;
             clock.Content = (this.Topmost) ? "最前面表示にしました" : "最前面表示を解除しました";
             msgRemainTime = 3;
+        }
+
+        private void MenuItem_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
         }
 
         protected override void OnMouseLeftButtonDown(MouseButtonEventArgs e)

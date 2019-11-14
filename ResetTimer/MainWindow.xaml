@@ -9,6 +9,11 @@
         Background="Transparent"
         WindowStyle="None"
         Title="MainWindow" Height="200" Width="300" MouseDoubleClick="Window_MouseDoubleClick">
+    <Window.ContextMenu>
+        <ContextMenu>
+            <MenuItem Header="終了" Click="MenuItem_Click"/>
+        </ContextMenu>
+    </Window.ContextMenu>
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="*"/>
